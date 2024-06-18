@@ -1,0 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $primary-family;
+  background-color: $secondary-color;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1568px;
+  display: flex;
+  flex-wrap: wrap;
+}

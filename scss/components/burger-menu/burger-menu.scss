@@ -1,0 +1,48 @@
+@mixin bars($color: #fff) {
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: $color;
+}
+
+.burger-menu {
+  position: relative;
+  height: 28px;
+  width: 72px;
+  cursor: pointer;
+
+  &__bar,
+  &::before,
+  &::after {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+
+  &::before {
+    content: "";
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+    bottom: 0px;
+  }
+
+  &__bar {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+}
+
+.menu__body_active {
+  position: fixed;
+  top: 97px;
+  width: 431px;
+  height: 800px;
+  background: url('../../../assets/images/burger-menu-bg.png');
+}
