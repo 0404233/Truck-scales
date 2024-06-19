@@ -1,11 +1,3 @@
-@mixin bars($color: #fff) {
-  display: block;
-  height: 3px;
-  width: 100%;
-  border-radius: 3px;
-  background-color: $color;
-}
-
 .burger-menu {
   position: relative;
   height: 28px;
@@ -13,22 +5,23 @@
   cursor: pointer;
 
   &__bar,
-  &::before,
-  &::after {
+  &:before,
+  &:after {
     position: absolute;
     height: 3px;
     width: 100%;
     left: 0;
     border-radius: 3px;
     background-color: #fff;
+    transition: all 0.3s ease;
   }
 
-  &::before {
+  &:before {
     content: "";
     top: 0;
   }
 
-  &::after {
+  &:after {
     content: "";
     bottom: 0px;
   }
@@ -37,12 +30,55 @@
     top: 50%;
     transform: scale(1) translate(0px, -50%);
   }
+
+  &.active {
+    .burger-menu__bar {
+      transform: scale(0);
+    }
+
+    &:before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    &:after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0px, 50%);
+    }
+  }
 }
 
-.menu__body_active {
+.menu__body {
   position: fixed;
-  top: 97px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -800px;
   width: 431px;
   height: 800px;
-  background: url('../../../assets/images/burger-menu-bg.png');
+  background: url("../../../assets/images/burger-menu.png");
+  transition: 0.3s ease-in-out;
+
+  &.active {
+    top: 97px;
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 329px;
+    height: 335px;
+    font-weight: 400;
+    font-size: 32px;
+
+    li {
+      width: 100%;
+
+      a:hover {
+        color: $accent-color;
+        transition: 0.3s linear;
+      }
+    }
+  }
 }

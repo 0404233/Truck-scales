@@ -2,21 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css" />
     <title>Автовесы</title>
-    <script src="./main.js" defer></script>
+    <script src="./main.js" defer type="module"></script>
   </head>
-  <body>
-    <div class="wrapper">
+  <body class="body">
+
       <header class="header" id="header">
         <div class="header__container container">
           <div class="header__menu menu">
             <div class="burger-menu">
               <span class="burger-menu__bar"></span>
             </div>
-            <nav class="menu__body_active">
-              <ul class="menu__list">
+            <nav class="menu__body">
+              <ul class="menu__body_list">
                 <li><a data-goto="section" href="#" class="menu-link">Автомобильные Весы</a></li>
                 <li><a data-goto="" href="#" class="menu-link">Модернизация</a></li>
                 <li><a data-goto="" href="#" class="menu-link">Поверка</a></li>
@@ -25,7 +25,9 @@
               </ul>
             </nav>
           </div>
-          <a href="#header" class="header__logo"></a>
+          <a href="#header" class="header__logo">
+            <img src="./assets/images/svg/logo.svg" alt="">
+          </a>
           <div class="header__contacts">
             <div class="header__contacts_number-block">
               <a href="tel:+">+375 (29) 333-10-00</a>
@@ -35,8 +37,19 @@
           </div>
         </div>
       </header>
-      <main></main>
-      <footer></footer>
-    </div>
+      <main>
+        <div class="main__container container">
+          <section></section>
+          <section></section>
+          <section></section>
+          <section></section>
+          <section></section>
+          <section></section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container container"></div>
+      </footer>
+
   </body>
 </html>

@@ -1,3 +1,5 @@
+import burgerMenu from "./scss/components/burger-menu/burger-menu.js"
+
 const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
 
 if (menuLinks.length > 0) {
@@ -19,3 +21,5 @@ if (menuLinks.length > 0) {
     }
   }
 }
+
+burgerMenu();

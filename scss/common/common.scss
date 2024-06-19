@@ -2,7 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.body {
+  position: relative;
+  height: 200vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,6 +16,4 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1568px;
-  display: flex;
-  flex-wrap: wrap;
 }

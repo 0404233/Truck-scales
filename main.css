@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Roboto;
   src: url("../../assets/fonts/Roboto-Regular.ttf");
@@ -18,57 +19,92 @@
   font-family: Oswald;
   src: url("../../assets/fonts/Oswald-VariableFont_wght.ttf");
 }
-*, *:before, *:after {
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
-  margin: 0;
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
 }
 
-footer, header, nav, section, main {
-  display: block;
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
+/* Выставляем основные настройки по-умолчанию для body */
 body {
-  line-height: 1;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
-ol, ul {
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
   list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-  content: none;
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
 }
 
-input {
-  border-radius: 0;
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
+.body {
+  position: relative;
+  height: 200vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -80,8 +116,6 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1568px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .burger-menu {
@@ -90,19 +124,20 @@ body {
   width: 72px;
   cursor: pointer;
 }
-.burger-menu__bar, .burger-menu::before, .burger-menu::after {
+.burger-menu__bar, .burger-menu:before, .burger-menu:after {
   position: absolute;
   height: 3px;
   width: 100%;
   left: 0;
   border-radius: 3px;
   background-color: #fff;
+  transition: all 0.3s ease;
 }
-.burger-menu::before {
+.burger-menu:before {
   content: "";
   top: 0;
 }
-.burger-menu::after {
+.burger-menu:after {
   content: "";
   bottom: 0px;
 }
@@ -110,20 +145,58 @@ body {
   top: 50%;
   transform: scale(1) translate(0px, -50%);
 }
+.burger-menu.active .burger-menu__bar {
+  transform: scale(0);
+}
+.burger-menu.active:before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0px, -50%);
+}
+.burger-menu.active:after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 50%);
+}
 
-.menu__body_active {
+.menu__body {
   position: fixed;
-  top: 97px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -800px;
   width: 431px;
   height: 800px;
-  background: url("../../../assets/images/burger-menu-bg.png");
+  background: url("../../../assets/images/burger-menu.png");
+  transition: 0.3s ease-in-out;
+}
+.menu__body.active {
+  top: 97px;
+}
+.menu__body_list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 329px;
+  height: 335px;
+  font-weight: 400;
+  font-size: 32px;
+}
+.menu__body_list li {
+  width: 100%;
+}
+.menu__body_list li a:hover {
+  color: #FFD600;
+  transition: 0.3s linear;
 }
 
 .header {
+  position: sticky;
   width: 100%;
+  top: 0;
+  left: 0;
   height: 97px;
   color: #fff;
   background-color: #000;
+  z-index: 2;
 }
 .header__container {
   height: 100%;
@@ -131,14 +204,46 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.header__menu {
+  padding: 20px;
+  margin-right: 185.19px;
+}
 .header__logo {
   height: 97px;
   width: 276px;
-  background: url("../../../assets/images/svg/logo.svg");
 }
-
-.wrapper {
-  width: 1920px;
+.header__contacts {
+  display: flex;
+  align-items: center;
+}
+.header__contacts_number-block {
+  display: flex;
+  flex-direction: column;
+}
+.header__contacts_number-block a:nth-child(1) {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: right;
+  color: #fff;
+}
+.header__contacts_number-block a:nth-child(2) {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-align: right;
+  color: #FFD600;
+}
+.header__contacts_insta {
+  margin-left: 103px;
+  display: block;
+  width: 34px;
+  height: 34px;
+  background: url("../../../assets/images/svg/insta-logo.svg");
+  transition: 0.3s linear;
+}
+.header__contacts_insta:hover {
+  background: url("../../../assets/images/svg/insta-logo-color.svg");
 }
 
 /*# sourceMappingURL=main.css.map */

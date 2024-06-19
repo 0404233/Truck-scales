@@ -1,13 +1,14 @@
 @import "../burger-menu/burger-menu.scss";
 
 .header {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
+  position: sticky;
   width: 100%;
+  top: 0;
+  left: 0;
   height: 97px;
   color: $secondary-color;
   background-color: $primary-color;
+  z-index: 2;
 
   &__container {
     height: 100%;
@@ -16,9 +17,52 @@
     align-items: center;
   }
 
+  &__menu {
+    padding: 20px;
+    margin-right: 185.19px;
+  }
+
   &__logo {
     height: 97px;
     width: 276px;
-    background: url("../../../assets/images/svg/logo.svg");
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+
+    &_number-block {
+      display: flex;
+      flex-direction: column;
+
+      a:nth-child(1) {
+        font-weight: 400;
+        font-size: 24px;
+        text-align: right;
+        color: $secondary-color;
+      }
+
+      a:nth-child(2) {
+        font-weight: 400;
+        font-size: 16px;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        text-align: right;
+        color: $accent-color;
+      }
+    }
+
+    &_insta {
+      margin-left: 103px;
+      display: block;
+      width: 34px;
+      height: 34px;
+      background: url("../../../assets/images/svg/insta-logo.svg");
+      transition: 0.3s linear;
+
+      &:hover {
+        background: url("../../../assets/images/svg/insta-logo-color.svg");
+      }
+    }
   }
 }
