@@ -1,4 +1,5 @@
-import burgerMenu from "./scss/components/burger-menu/burger-menu.js"
+import burgerMenu from "./scss/components/burger-menu/burger-menu.js";
+import gallery from "./scss/components/section-gallery/section-gallery.js"
 
 const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
 
@@ -23,3 +24,4 @@ if (menuLinks.length > 0) {
 }
 
 burgerMenu();
+gallery();

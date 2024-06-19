@@ -51,20 +51,20 @@
 .menu__body {
   position: fixed;
   display: flex;
-  align-items: center;
   justify-content: center;
   top: -800px;
   width: 431px;
   height: 800px;
-  background: url("../../../assets/images/burger-menu.png");
+  background: url("../../../assets/images/bg/burger-menu-bg.png");
   transition: 0.3s ease-in-out;
 
   &.active {
-    top: 97px;
+    top: 95px;
   }
 
   &_list {
     display: flex;
+    margin-top: 120px;
     flex-direction: column;
     gap: 25px;
     width: 329px;

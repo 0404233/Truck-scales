@@ -27,8 +27,8 @@
 }
 
 /* Убираем внутренние отступы */
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 
@@ -39,8 +39,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -59,8 +59,8 @@ body {
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -104,7 +104,6 @@ html {
 
 .body {
   position: relative;
-  height: 200vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -160,19 +159,19 @@ html {
 .menu__body {
   position: fixed;
   display: flex;
-  align-items: center;
   justify-content: center;
   top: -800px;
   width: 431px;
   height: 800px;
-  background: url("../../../assets/images/burger-menu.png");
+  background: url("../../../assets/images/bg/burger-menu-bg.png");
   transition: 0.3s ease-in-out;
 }
 .menu__body.active {
-  top: 97px;
+  top: 95px;
 }
 .menu__body_list {
   display: flex;
+  margin-top: 120px;
   flex-direction: column;
   gap: 25px;
   width: 329px;
@@ -244,6 +243,237 @@ html {
 }
 .header__contacts_insta:hover {
   background: url("../../../assets/images/svg/insta-logo-color.svg");
+}
+
+.hero {
+  min-height: 800px;
+  padding-bottom: 30px;
+  background: url("../../../assets/images/bg/hero-bg.png");
+}
+.hero__titles {
+  margin: 0 0 140px 8px;
+  padding-top: 67px;
+  color: #fff;
+}
+.hero__titles h1 {
+  padding-bottom: 29px;
+  margin-bottom: 29px;
+  font-weight: 600;
+  font-size: 6.875rem;
+  line-height: 85%;
+  border-radius: 3px;
+  width: 888px;
+  border-bottom: 2px solid #FFD600;
+}
+.hero__titles h1 span {
+  color: #FFD600;
+}
+.hero__titles p {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 62%;
+}
+.hero__titles button {
+  margin-top: 66px;
+  width: 378px;
+  height: 67px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s linear;
+}
+.hero__titles button:hover {
+  border: 1px solid #FFD600;
+  color: #FFD600;
+  transition: all 0.3s linear;
+}
+.hero__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 74px;
+}
+.hero__info_block {
+  padding-top: 18px;
+  width: 430px;
+  border-top: 3px solid #fff;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+.hero__info_block:hover {
+  color: #FFD600;
+  transition: 0.3s linear;
+}
+
+.service {
+  min-height: 1909px;
+  margin: 232px auto 100px;
+}
+.service__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 112px;
+  padding: 43px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.service__card:nth-child(1), .service__card:nth-child(2) {
+  flex-direction: row-reverse;
+}
+.service__card:nth-child(4) {
+  gap: 83px;
+}
+.service__card_info {
+  margin-bottom: 38px;
+  max-width: 426px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 49px;
+}
+.service__card_info p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 32px;
+}
+.service__card_info button {
+  width: 315px;
+  height: 55px;
+  border: 1px solid #000;
+  border-radius: 0px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000;
+  background: transparent;
+  transition: all 0.3s linear;
+}
+.service__card_info button:hover {
+  border: 1px solid #FFD600;
+  color: #FFD600;
+  transition: all 0.3s linear;
+}
+.service__card img {
+  width: 960px;
+  height: 400px;
+}
+
+.our-team {
+  min-width: 100vw;
+  min-height: 732px;
+  padding: 51px 0 0 0;
+  background: url("../../../assets/images/bg/our-team-bg.png");
+  background-size: 1920px;
+  background-position: center;
+}
+.our-team h2 {
+  margin: 0 0 18px 0;
+  font-weight: 400;
+  font-size: 64px;
+  color: #FFD600;
+}
+.our-team p {
+  max-width: 968px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+  color: #fff;
+}
+.our-team p:nth-child(3) {
+  margin: 25px 0 16px;
+}
+.our-team p:nth-child(4) {
+  padding: 9px 0 0 0;
+  margin: 0 0 31px 0;
+  border-top: 2px solid #fff;
+}
+.our-team button {
+  width: 315px;
+  height: 55px;
+  border: 1px solid #fff;
+  border-radius: 0px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s linear;
+}
+.our-team button:hover {
+  border: 1px solid #FFD600;
+  color: #FFD600;
+  transition: all 0.3s linear;
+}
+
+.gallery {
+  display: flex;
+  gap: 64px;
+  flex-direction: row-reverse;
+  padding: 100px 0;
+}
+.gallery__block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.gallery__block_window {
+  display: flex;
+  margin: 0 0 28.67px 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 755px;
+  height: 502px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.gallery__block_window div {
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery__block_window div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(100%);
+  transition: all 0.3s;
+}
+.gallery__block_window div img:hover {
+  transform: scale(110%);
+}
+.gallery__block button {
+  width: 315px;
+  height: 55px;
+  border: 1px solid #000;
+  border-radius: 0px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000;
+  background: transparent;
+  transition: all 0.3s linear;
+}
+.gallery__block button:hover {
+  border: 1px solid #FFD600;
+  color: #FFD600;
+  transition: all 0.3s linear;
+}
+.gallery h2 {
+  margin: 60px 0 97px 0;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 125%;
+}
+.gallery p {
+  font-weight: 300;
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */

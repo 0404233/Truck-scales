@@ -2,54 +2,189 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
     <title>Автовесы</title>
     <script src="./main.js" defer type="module"></script>
   </head>
   <body class="body">
-
-      <header class="header" id="header">
-        <div class="header__container container">
-          <div class="header__menu menu">
-            <div class="burger-menu">
-              <span class="burger-menu__bar"></span>
-            </div>
-            <nav class="menu__body">
-              <ul class="menu__body_list">
-                <li><a data-goto="section" href="#" class="menu-link">Автомобильные Весы</a></li>
-                <li><a data-goto="" href="#" class="menu-link">Модернизация</a></li>
-                <li><a data-goto="" href="#" class="menu-link">Поверка</a></li>
-                <li><a data-goto="" href="#" class="menu-link">Техническое обслуживание</a></li>
-                <li><a data-goto="" href="#" class="menu-link">О нас</a></li>
-              </ul>
-            </nav>
+    <header class="main-header header">
+      <div class="header__container container">
+        <div class="header__menu menu">
+          <div class="burger-menu">
+            <span class="burger-menu__bar"></span>
           </div>
-          <a href="#header" class="header__logo">
-            <img src="./assets/images/svg/logo.svg" alt="">
-          </a>
-          <div class="header__contacts">
-            <div class="header__contacts_number-block">
-              <a href="tel:+">+375 (29) 333-10-00</a>
-              <a>Обратный звонок</a>
-            </div>
-            <a href="#" class="header__contacts_insta"></a>
+          <nav class="menu__body">
+            <ul class="menu__body_list">
+              <li>
+                <a data-goto=".car-scales" href="#" class="menu-link"
+                  >Автомобильные Весы</a
+                >
+              </li>
+              <li>
+                <a data-goto=".mechanical-scales" href="#" class="menu-link">Модернизация</a>
+              </li>
+              <li><a data-goto=".verification-scales" href="#" class="menu-link">Поверка</a></li>
+              <li>
+                <a data-goto=".maintenance" href="#" class="menu-link"
+                  >Техническое обслуживание</a
+                >
+              </li>
+              <li><a data-goto=".our-team" href="#" class="menu-link">О нас</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a href="#header" class="header__logo">
+          <img src="./assets/images/svg/logo.svg" alt="logo" />
+        </a>
+        <div class="header__contacts">
+          <div class="header__contacts_number-block">
+            <a href="tel:+">+375 (29) 333-10-00</a>
+            <a>Обратный звонок</a>
+          </div>
+          <a href="#" class="header__contacts_insta"></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-main main">
+      <div class="hero">
+        <div class="container">
+          <div class="hero__titles">
+            <h1>
+              <span>Автомобильные</span><br />
+              электронные весы
+            </h1>
+            <p>Идеальное решение для контроля веса вашего транспорта</p>
+            <button>Пригласить в тендер</button>
+          </div>
+          <div class="hero__info">
+            <p class="hero__info_block">
+              Низкие цены на все оборудование при очень высоком качестве
+              оборудования и комплектующих
+            </p>
+            <p class="hero__info_block">
+              На все оборудование гарантия от 24 месяцев. Гарантийное
+              обслуживание и постгарантийный сервис
+            </p>
+            <p class="hero__info_block">
+              Широкий перечень товаров и услуг для сельского хозяйства в наличие
+              на складе
+            </p>
           </div>
         </div>
-      </header>
-      <main>
-        <div class="main__container container">
-          <section></section>
-          <section></section>
-          <section></section>
-          <section></section>
-          <section></section>
-          <section></section>
-        </div>
-      </main>
-      <footer class="footer">
-        <div class="footer__container container"></div>
-      </footer>
+      </div>
 
+      <div class="main__container">
+        <section class="service container">
+          <div class="service__card car-scales">
+            <img
+              src="./assets/images/section-service/scales-first.png"
+              alt="service"
+            />
+            <div class="service__card_info">
+              <p>Автомобильные электронные весы</p>
+              <button>Подробнее</button>
+            </div>
+          </div>
+          <div class="service__card mechanical-scales">
+            <img
+              src="./assets/images/section-service/scales-second.png"
+              alt="service"
+            />
+            <div class="service__card_info">
+              <p>Модернизация механических весов</p>
+              <button>Подробнее</button>
+            </div>
+          </div>
+          <div class="service__card verification-scales">
+            <img
+              src="./assets/images/section-service/scales-third.png"
+              alt="service"
+            />
+            <div class="service__card_info">
+              <p>Поверка автомобильных весов</p>
+              <button>Подробнее</button>
+            </div>
+          </div>
+          <div class="service__card">
+            <img
+              src="./assets/images/section-service/scales-fourth.png"
+              alt="service"
+            />
+            <div class="service__card_info maintenance">
+              <p>Техническое обслуживание танзометрического обслуживания</p>
+              <button>Подробнее</button>
+            </div>
+          </div>
+        </section>
+        <section class="our-team">
+          <div class="container">
+            <h2>Наша компания</h2>
+            <p>
+              Наша компания - лидер в области производства автомобильных весов и
+              весоизмерительного оборудования по доступной цене. Мы
+              специализируемся на производстве и установке высокоточных
+              автомобильных весов, которые широко используются в логистических и
+              транспортных компаниях мясной и молочной отраслей.
+            </p>
+            <p>
+              Наша компания имеет многолетний опыт работы в данной сфере и
+              предлагает клиентам только высококачественный продукт, который
+              соответствует международному стандарту качества СТБ ISO 9001-2015
+              и имеет сертификат собственного производства. Мы также
+              предоставляем услуги по обслуживанию и калибровке весов, чтобы
+              гарантировать их точность и надежность на протяжении всего срока
+              эксплуатации.
+            </p>
+            <p>
+              Мы увеличиваем вашу прибыль, благодаря надежным весов для точного
+              и простого учёта входящих материалов и выпускаемой продукции
+            </p>
+            <button>Оставить заявку</button>
+          </div>
+        </section>
+        <section class="gallery container">
+          <div class="gallery__info">
+            <h2>ТУТ БУДЕТ ЛОЗУНГ!</h2>
+            <p>
+              Нуждаетесь в весах немедленно? Мы здесь, чтобы помочь! Наша команда
+              готова быстро обработать ваш заказ и обеспечить бесперебойную
+              доставку. Свяжитесь с нами сегодня, чтобы получить подробную
+              информацию о наших продуктах и ​​узнать, как быстро мы можем вам
+              помочь.
+            </p>
+          </div>
+          <div class="gallery__block">
+            <div class="gallery__block_window">
+              <div>
+                <img src="./assets/images/section-gallery/gallery-first.png" alt="">
+              </div>
+              <div>
+                <img src="./assets/images/section-gallery/gallery-second.png" alt="">
+              </div>
+              <div>
+                <img src="./assets/images/section-gallery/gallery-third.png" alt="">
+              </div>
+              <div>
+                <img src="./assets/images/section-gallery/gallery-fourth.png" alt="">
+              </div>
+              <div>
+                <img src="./assets/images/section-gallery/gallery-fifth.png" alt="">
+              </div>
+              <div>
+                <img src="./assets/images/section-gallery/gallery-sixth.png" alt="">
+              </div>
+            </div>
+            <button>Фотогалерея</button>
+          </div>
+        </section>
+        <section></section>
+        <section></section>
+      </div>
+    </main>
+    <footer class="main-footer footer">
+      <div class="footer__container container"></div>
+    </footer>
   </body>
 </html>

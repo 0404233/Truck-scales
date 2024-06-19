@@ -1,0 +1,48 @@
+.service {
+  min-height: 1909px;
+  margin: 232px auto 100px;
+
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 112px;
+    padding: 43px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(4) {
+      gap: 83px
+    }
+
+    &_info {
+      margin-bottom: 38px;
+      max-width: 426px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 49px;
+
+      p {
+        text-align: center;
+        font-weight: 400;
+        font-size: 32px;
+      }
+
+      button {
+        @include btn;
+      }
+    }
+
+    img {
+      width: 960px;
+      height: 400px;
+    }
+  }
+}

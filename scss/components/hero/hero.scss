@@ -1,0 +1,60 @@
+.hero {
+  min-height: 800px;
+  padding-bottom: 30px;
+  background: url("../../../assets/images/bg/hero-bg.png");
+
+  &__titles {
+    margin: 0 0 140px 8px;
+    padding-top: 67px;
+    color: $secondary-color;
+
+    h1 {
+      padding-bottom: 29px;
+      margin-bottom: 29px;
+      font-weight: 600;
+      font-size: 6.875rem;
+      line-height: 85%;
+      border-radius: 3px;
+      width: 888px;
+      border-bottom: 2px solid $accent-color;
+
+      span {
+        color: $accent-color;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 62%;
+    }
+
+    button {
+      margin-top: 66px;
+      @include btn($secondary-color, 10px, 378px, 67px);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 74px;
+
+    &_block {
+      padding-top: 18px;
+      width: 430px;
+      border-top: 3px solid #fff;
+      border-radius: 3px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
+      color: $secondary-color;
+      cursor: pointer;
+
+      &:hover {
+        color: $accent-color;
+        transition: 0.3s linear;
+      }
+    }
+  }
+}

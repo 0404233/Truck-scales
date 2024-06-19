@@ -1,0 +1,37 @@
+.our-team {
+  min-width: 100vw;
+  min-height: 732px;
+  padding: 51px 0 0 0;
+  background: url("../../../assets/images/bg/our-team-bg.png");
+  background-size: 1920px;
+  background-position: center;
+
+  h2 {
+    margin: 0 0 18px 0;
+    font-weight: 400;
+    font-size: 64px;
+    color: $accent-color;
+  }
+
+  p {
+    max-width: 968px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 125%;
+    color: $secondary-color;
+
+    &:nth-child(3) {
+      margin: 25px 0 16px;
+    }
+
+    &:nth-child(4) {
+      padding: 9px 0 0 0;
+      margin: 0 0 31px 0;
+      border-top: 2px solid #fff;
+    }
+  }
+
+  button {
+    @include btn($secondary-color);
+  }
+}

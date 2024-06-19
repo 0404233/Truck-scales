@@ -1,0 +1,17 @@
+@mixin btn($color: $primary-color, $radius: 0px, $w: 315px, $h: 55px) {
+  width: $w;
+  height: $h;
+  border: 1px solid $color;
+  border-radius: $radius;
+  font-weight: 400;
+  font-size: 24px;
+  color: $color;
+  background: transparent;
+  transition: all 0.3s linear;
+
+  &:hover {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+    transition: all 0.3s linear;
+  }
+}
