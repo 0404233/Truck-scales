@@ -10,6 +10,7 @@ html {
   justify-content: space-between;
   font-family: $primary-family;
   background-color: $secondary-color;
+  overflow-x: hidden;
 }
 
 .container {
