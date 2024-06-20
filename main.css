@@ -110,6 +110,7 @@ html {
   justify-content: space-between;
   font-family: "Oswald", sans-serif;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 .container {
@@ -119,6 +120,7 @@ html {
 
 .burger-menu {
   position: relative;
+  z-index: 1;
   height: 28px;
   width: 72px;
   cursor: pointer;
@@ -195,7 +197,6 @@ html {
   height: 97px;
   color: #fff;
   background-color: #000;
-  z-index: 2;
 }
 .header__container {
   height: 100%;
